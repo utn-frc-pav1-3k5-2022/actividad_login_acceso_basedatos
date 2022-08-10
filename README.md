@@ -1,18 +1,6 @@
 ## Actividad: Login con Base de datos
 
-### 1. Clonar Repositorio (Clone/Checkout)
-
-**1.1. Ejecutar comando clone para descargar repositorio:** 
-```sh
-$ git clone https://github.com/utn-frc-pav1-3k5-2021/actividad_login_acceso_basedatos
-```
-**1.2. Ubicarse en la carpeta generada con el nombre del repositorio: 
-
-```sh
-$ cd actividad_login_acceso_basedatos
-```
-
-**1.3. Crear un nuevo branch (rama)**
+**1. Crear un nuevo branch (rama)**
 
 Para crear una nueva rama (branch) y saltar a ella, en un solo paso, puedes utilizar el comando  `git checkout`  con la opción  `-b`, indicando el nombre del nuevo branch (reemplazando el nro de legajo) de la siguiente forma branch_{legajo}, para el legajo 12345:
 
