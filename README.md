@@ -16,7 +16,16 @@ $ git push --set-upstream origin branch_12345
 ### 2. Ejecutar Script Base de datos
 **2.1. Iniciar la aplicación `Microsoft Sql Server Management Studio`**
 
-Solicitará ingresar los datos de la base de datos para generar una conexión, completar los datos y hacer click en **Connect**. Los datos del servidor del labsis son:
+Solicitará ingresar los datos de la base de datos para generar una conexión, completar los datos y hacer click en **Connect**. 
+
+Los datos del servidor del labsis son:
+
+ - **Tipo Servidor:** Database Engine
+ - **Nombre Servidor:** maquis
+ - **User ID:** avisuales1
+ - **Password:** ****
+
+Los datos del servidor del local son:
 
  - **Tipo Servidor:** Database Engine
  - **Nombre Servidor:** .\SQLEXPRESS
@@ -31,7 +40,7 @@ Para ejecutar el script hacer click sobre el botón `Ejecutar` (o usar la tecla 
 
 ### 3. Comenzamos con el desarrollo
    
-En este punto centramos en refactorizar la funcionalidad de login del proyecto **BugTracker** y mediante el uso de los objetos de ADO.NET vamos a acceder a una base de datos alojada en un servidor SQL-Server 2008 para que la validación de usuario y clave se haga efectivamente contra los usuarios registrados en la tabla **Usuario**.
+En este punto centramos en refactorizar la funcionalidad de login del proyecto **BugTracker** y mediante el uso de los objetos de ADO.NET vamos a acceder a una base de datos alojada en un servidor SQL-Server para que la validación de usuario y clave se haga efectivamente contra los usuarios registrados en la tabla **Usuario**.
 
 El cambio se reduce solo a modificar el método auxiliar de la clase frmLogin: ValidarCredenciales() de la siguiente forma:
 
