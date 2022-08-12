@@ -114,7 +114,7 @@ public class DataManager
         }
         catch (Exception ex)
         {
-            throw ex;
+            throw (ex);
         }
         finally
         {
