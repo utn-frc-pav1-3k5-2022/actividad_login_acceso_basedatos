@@ -6,14 +6,16 @@ using System.Data.SqlClient;
 public class DataManager
 {
 
-    private string string_conexion;
+
     private static DataManager instance;
+    private string string_conexion;
+
     public DataManager()
     {
-        string_conexion = "Data Source=.\\SQLEXPRESS;Initial Catalog=BugTracker;Integrated Security=true;";
+        var string_conexion = "Data Source=.\\SQLEXPRESS;Initial Catalog=BugTracker;Integrated Security=true;";
+
     }
 
-    // Con el siguiente método aplicamos el patrón singleton
     public static DataManager GetInstance()
     {
         if (instance == null)
@@ -63,11 +65,6 @@ public class DataManager
         {
             throw (ex);
         }
-        finally
-        {
-            if (dbConnection.State != ConnectionState.Closed)
-                dbConnection.Close();
-        }
     }
 
     /// Resumen:
@@ -116,11 +113,6 @@ public class DataManager
         {
             throw ex;
         }
-        finally
-        {
-            if (dbConnection.State != ConnectionState.Closed)
-                dbConnection.Close();
-        }
         return rtdo;
     }
 
@@ -150,12 +142,7 @@ public class DataManager
         }
         catch (SqlException ex)
         {
-            throw (ex);
-        }
-        finally
-        {
-            if (dbConnection.State != ConnectionState.Closed)
-                dbConnection.Close();
+            throw ex;
         }
     }
 
