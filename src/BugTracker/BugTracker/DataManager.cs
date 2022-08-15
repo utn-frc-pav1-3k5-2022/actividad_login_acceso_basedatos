@@ -142,7 +142,7 @@ public class DataManager
         }
         catch (SqlException ex)
         {
-            throw (ex);
+            throw ex;
         }
     }
 
