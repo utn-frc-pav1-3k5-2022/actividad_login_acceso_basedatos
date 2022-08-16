@@ -93,10 +93,10 @@ namespace BugTracker
         }
         }
 
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-            this.CenterToParent();
-        }
+        //private void frmLogin_Load(object sender, EventArgs e)
+        //{
+         //   this.CenterToParent();
+        //}
     }
 
-}
+//}
