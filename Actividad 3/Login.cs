@@ -12,7 +12,7 @@ public class DataManager
 
     public DataManager()
     {
-        var string_conexion = "Data Source=.\\SQLEXPRESS;Initial Catalog=BugTracker;Integrated Security=true;";
+        string_conexion = "Data Source=.\\SQLEXPRESS;Initial Catalog=BugTracker81940;Integrated Security=true;";
 
     }
 
