@@ -1,4 +1,7 @@
-﻿namespace BugTracker
+﻿using System.Data.SqlClient;
+using System.Data;
+
+namespace BugTracker
 {
     partial class frmLogin
     {
@@ -20,6 +23,26 @@
             base.Dispose(disposing);
         }
 
+        public bool ValidarCredenciales(string pUsuario, string pPassword)
+        {
+            bool userValido = false;
+            try
+            {   String consultaSql = string.Concat(" SELECT * ",
+                                                   "   FROM Usuarios ",
+                                                   "  WHERE usuario =  '", pUsuario, "'");
+
+                DataTable resultado = DataManager.GetInstance().ConsultaSQL(consultaSql);
+                if (resultado.Rows.Count >= 1)
+                {if (resultado.Rows[0]["password"].ToString() == pPassword)
+                    {
+                        userValido = true;
+                    }
+                }
+
+            }
+            catch (SqlException ex)
+            {MessageBox.Show(string.Concat("Error de base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+             return userValido;}
         #region Código generado por el Diseñador de Windows Forms
 
         /// <summary>
