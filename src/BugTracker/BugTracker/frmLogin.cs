@@ -51,10 +51,7 @@ namespace BugTracker
             }
         }
 
-        public bool ValidarCredenciales(string pUsuario, string pPassword)
-        {
-            return true;
-        }
+      
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
