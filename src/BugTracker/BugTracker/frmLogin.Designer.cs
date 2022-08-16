@@ -104,7 +104,6 @@
             this.MinimizeBox = false;
             this.Name = "frmLogin";
             this.Text = "Inicio de Sesión";
-            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
